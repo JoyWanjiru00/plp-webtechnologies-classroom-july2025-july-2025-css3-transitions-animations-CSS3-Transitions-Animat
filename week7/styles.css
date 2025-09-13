@@ -1,0 +1,60 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 2rem;
+  background: #f9f9f9;
+}
+
+/* =======================
+   PART 1: CSS ONLY
+   ======================= */
+
+/* Button hover effect */
+.btn {
+  background: #6200ea;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  transition: background 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #3700b3;
+  transform: scale(1.1);
+}
+
+/* Smooth fade-in box */
+.fade-box {
+  width: 100px;
+  height: 100px;
+  background: coral;
+  margin: 20px auto;
+  opacity: 0;
+  animation: fadeIn 3s forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* =======================
+   PART 3: CSS + JS
+   ======================= */
+
+/* Box that will animate when JS toggles the class */
+.animate-box {
+  width: 100px;
+  height: 100px;
+  background: teal;
+  margin: 20px auto;
+  transition: transform 0.5s ease, background 0.5s ease;
+}
+
+.animate-box.active {
+  transform: rotate(180deg) scale(1.2);
+  background: tomato;
+}
